@@ -8,6 +8,7 @@ Conforme CLAUDE.md: prompts de ajuste menores ("proceed", "fix it") não são do
 ## 1. Planejamento inicial
 
 **Prompt:**
+
 > "help me create a plan to resolve this work / use brainstorm and grill me skills to make a complete overview"
 
 **Resultado:** Sessão de brainstorming + grill-me para levantar todos os requisitos do projeto, restrições de prazo, tamanho da equipe (solo), ferramentas disponíveis e escolha dos datasets. Gerou o spec em `docs/superpowers/specs/` e o plano em `docs/superpowers/plans/`.
@@ -17,6 +18,7 @@ Conforme CLAUDE.md: prompts de ajuste menores ("proceed", "fix it") não são do
 ## 2. Seleção do dataset
 
 **Prompt:**
+
 > Datasets escolhidos: Portal da Transparência — `2025_Receitas.csv` (175k linhas) e `2025_OrcamentoDespesa.csv` (26k linhas), ano-exercício 2025, encoding ISO-8859-1, separador `;`.
 
 **Resultado:** Dois datasets federais brasileiros oficiais de 2025, cobrindo receitas arrecadadas e despesas orçamentárias executadas.
@@ -26,6 +28,7 @@ Conforme CLAUDE.md: prompts de ajuste menores ("proceed", "fix it") não são do
 ## 3. Definição do problema
 
 **Prompt:**
+
 > "Qual o equilíbrio entre receitas arrecadadas e despesas executadas no orçamento federal brasileiro em 2025, e como esse equilíbrio se distribui entre órgãos e funções?"
 
 **Resultado:** Problema orientado a dados, com atributos específicos (receita realizada vs. despesa executada, por órgão superior), definido como hipótese central do projeto.
@@ -35,9 +38,11 @@ Conforme CLAUDE.md: prompts de ajuste menores ("proceed", "fix it") não são do
 ## 4. Métodos estatísticos
 
 **Prompt (implícito na sessão de brainstorming):**
+
 > Selecionar ≥4 métodos estatísticos cobrindo todos os critérios de avaliação.
 
 **Resultado:** Cinco métodos definidos:
+
 1. Média — gasto/receita médio por órgão e função
 2. Mediana — taxa de execução mediana por órgão
 3. Desvio padrão — variância nas taxas de execução
@@ -49,9 +54,11 @@ Conforme CLAUDE.md: prompts de ajuste menores ("proceed", "fix it") não são do
 ## 5. Seleção das visualizações
 
 **Prompt:**
+
 > "use 1, 2, 3 and 6" (referente à lista de opções de gráficos apresentadas)
 
 **Resultado:** Quatro visualizações selecionadas:
+
 1. Bar chart — Top 10 órgãos por despesa executada
 2. Bar chart agrupado — Receita prevista vs. realizada por categoria econômica
 3. Scatter plot — Orçamento inicial vs. executado por função
@@ -62,6 +69,7 @@ Conforme CLAUDE.md: prompts de ajuste menores ("proceed", "fix it") não são do
 ## 6. Escolha das ferramentas
 
 **Contexto da sessão de brainstorming:**
+
 > Python (pandas, matplotlib, seaborn) para análise; relatório em Google Docs → PDF.
 
 **Resultado:** Stack definida: Python no Jupyter Notebook para EDA e geração dos gráficos PNG; relatório científico no Google Docs exportado como PDF.
@@ -71,6 +79,7 @@ Conforme CLAUDE.md: prompts de ajuste menores ("proceed", "fix it") não são do
 ## 7. Estratégia de implementação
 
 **Prompt:**
+
 > "implement using subagents / create revisable amounts of code, going through tasks slowly / ask confirmation before implementing a full task"
 
 **Resultado:** Adotado o padrão subagent-driven development — um subagente por tarefa, revisão em duas etapas (spec compliance + code quality), confirmação do usuário antes de cada tarefa.
@@ -80,17 +89,9 @@ Conforme CLAUDE.md: prompts de ajuste menores ("proceed", "fix it") não são do
 ## 8. Relatório PDF — decisão de postergar
 
 **Prompt:**
+
 > "no. Lets make the report first, but document it is missing. We need to make it later"
 
 **Contexto:** Pergunta sobre gerar o PDF automaticamente vs. manualmente no Google Docs.
 
 **Resultado:** PDF do relatório marcado como pendente no plano (Task 14). Será produzido manualmente no Google Docs após conclusão da análise.
-
----
-
-## 9. Regra de commits
-
-**Prompt:**
-> "does not add you as co author"
-
-**Resultado:** Todos os commits deste projeto não incluem linha `Co-Authored-By`. Regra aplicada a partir do commit do notebook em diante.
