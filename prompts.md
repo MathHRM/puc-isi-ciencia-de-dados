@@ -95,3 +95,33 @@ Conforme CLAUDE.md: prompts de ajuste menores ("proceed", "fix it") não são do
 **Contexto:** Pergunta sobre gerar o PDF automaticamente vs. manualmente no Google Docs.
 
 **Resultado:** PDF do relatório marcado como pendente no plano (Task 14). Será produzido manualmente no Google Docs após conclusão da análise.
+
+---
+
+## 9. Estrutura do relatório — seguir template PUC
+
+**Prompt:**
+
+> "siga o padrao do template @template_tcc_desenvolvimento_template.md"
+
+**Resultado:** Relatório reestruturado conforme template TCC de desenvolvimento da PUC Minas: seções numeradas (1. Introdução, 2. Referencial Teórico, 3. Trabalhos Relacionados, 4. Metodologia, 5. Resultados e Análise, 6. Conclusão), formatação de tabelas, referências alfabéticas com recuo 0,5 cm, indentação 1,27 cm a partir do segundo parágrafo.
+
+---
+
+## 10. Localização da seção de uso de IA
+
+**Prompt:**
+
+> "acredito que uso da ia vai em metodologia, nao?"
+
+**Resultado:** Seção de uso de inteligência artificial generativa movida para dentro de 4. Metodologia como subseção 4.3, em vez de seção independente. Decisão estrutural sobre organização do relatório.
+
+---
+
+## 11. Correção das referências do dataset
+
+**Prompt:**
+
+> "the references for the dataset are only:\n\nhttps://portaldatransparencia.gov.br/download-de-dados/orcamento-despesa\nhttps://portaldatransparencia.gov.br/download-de-dados/receitas"
+
+**Resultado:** Referências bibliográficas corrigidas: referência genérica ao Portal da Transparência substituída por duas entradas específicas (CGU 2025a e CGU 2025b) apontando para as páginas exatas de download dos datasets. Citações inline nas seções 2.3 e 5.1 atualizadas correspondentemente.

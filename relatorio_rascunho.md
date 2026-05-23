@@ -92,7 +92,7 @@ Na etapa de definição do problema, foram formuladas três hipóteses orientada
 
 A inteligência artificial generativa foi utilizada como ferramenta de apoio em todas as etapas do trabalho, por meio do assistente Claude (Anthropic 2024) via Claude Code CLI. Os principais usos foram: (1) brainstorming para definição do problema e das hipóteses, com técnica de _grill-me_ para identificar lacunas no planejamento; (2) elaboração do plano de implementação, com especificação de tarefas e etapas; (3) geração e revisão do código Python para carga, limpeza, análise e visualização dos dados; e (4) apoio à redação deste relatório.
 
-Todos os prompts significativos utilizados foram documentados no arquivo `prompts.md`, em conformidade com os requisitos do trabalho. Os prompts de ajuste menor — como "corrija isso" ou "execute" — não foram documentados. A lista completa contém oito prompts documentados, cobrindo as etapas de planejamento, seleção de _dataset_, definição do problema, seleção de métodos estatísticos e visualizações, escolha de ferramentas, estratégia de implementação e decisão sobre o formato do relatório.
+Todos os prompts significativos utilizados foram documentados no arquivo `prompts.md`, em conformidade com os requisitos do trabalho. Os prompts de ajuste menor — como "corrija isso" ou "execute" — não foram documentados. A lista completa contém onze prompts documentados, cobrindo as etapas de planejamento, seleção de _dataset_, definição do problema, seleção de métodos estatísticos e visualizações, escolha de ferramentas, estratégia de implementação, decisão sobre o formato do relatório, estruturação conforme template institucional, localização da seção de IA e correção das referências bibliográficas.
 
 ---
 
